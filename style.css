@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600&display=swap');
 
 * {
-    font-size: 100%;
+    /* font-size: 12px; */
     margin: 0;
     padding: 0;
     border: 0;
@@ -10,14 +10,40 @@
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    font-size: 0.75rem;
+    /* Default font size */
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 0.875rem;
+        /* 14px for small screens */
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+        font-size: 1.125rem;
+        /* 18px for medium screens */
+    }
+}
+
+@media screen and (min-width: 901px) {
+    body {
+        font-size: 1.25rem;
+        /* 20px for large screens */
+    }
+}
+
 .logo {
-    padding: 36px 74px;
+    padding: 4.5vh 6vw;
     display: inline-block;
 }
 
 .logo img {
-    width: 250px;
-    height: 27px;
+    width: 15vw;
+    height: 5vh;
 }
 
 .nav-bar ul {
@@ -30,29 +56,24 @@
 }
 
 .nav-bar {
-    padding: 35px 0px;
+    padding: 2.2vw 1.5vw;
 }
 
 .nav-bar li a {
     display: block;
     text-align: center;
-    padding: 12px 32px;
+    padding: 1vw 2vw;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
-    text-decoration: none solid rgb(46,32,88);
+    text-decoration: none solid rgb(46, 32, 88);
     color: #2E2058;
 }
 
 .nav-bar .discuss a {
     background-color: #2E2058;
-    padding: 10px 20px;
-    padding-bottom: 10px;
+    padding: 2vh 2vw;
     color: white;
-}
-
-.discuss {
-    margin: 1px 0px 0px 3px;
 }
 
 .logo-container {
@@ -60,109 +81,120 @@
 }
 
 .info-container .info {
-    margin-left: 88px;
+    margin-left: 5.8vw;
     width: 44vw;
-    height: 569px;
+    height: 85vh;
 }
 
 .info-container .anim {
-    margin-right: 110px;
-    margin-top: 69px;
-    width: 40vw;
-    height: 500px;
+    margin-right: 6.5vw;
+    margin-top: 4vh;
+    width: 48vw;
+    height: 85vh;
 }
 
 .anim img {
-    height: 500px;
+    height: 71vh;
 }
 
 .info-container {
     display: flex;
-    justify-content: space-between;
+    gap: 4vw;
 }
 
 .info .head {
-    height: 61px;
+    height: 8vh;
 }
 
 .head h1 {
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 1.875rem;
+    font-weight: 700;
     color: #2E2058;
-    margin-top: 100px;
+    margin-top: 10vh;
 }
 
 .info .para p {
     color: #2E2058;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: 37px;
+    line-height: 5vh;
 }
 
-.btn button{
+.btn button {
     width: auto;
-    height: 50px;
+    height: 7vh;
     color: #2E2058;
     background-color: #f8ec1f;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 1.3vh 1.7vw;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    margin-top: 23px;
-}
-
-.layout {
-    margin-top: 45px;
-}
-
-.layout .internal {
-    display: flex;
-    gap: 63px;
-}
-
-.work span {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 18px;
-    color: #2E2058;
-}
-
-.work p {
-    font-size: 12px;
-    font-weight: 500;
-    color: #2E2058;
-    margin-top: 20px;
-}
-
-.internal {
-    border: 1px solid #2E2058;
-    padding: 46px 0 30px 75px;
+    margin-top: 3.3vh;
 }
 
 .layout {
     width: 43vw;
+    height: 22vh;
+    margin-top: 6.4vh;
+}
+
+.layout .internal {
+    width: 43vw;
+    height: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    border: 0.1vw solid #2E2058;
+}
+
+.internal .google-partner-img img{
+    height: 8vh;
+    width: 8vw;
+}
+
+.internal .google-partner-img,
+.internal .work {
+    height: fit-content;
+    width: fit-content;
+}
+
+.work span {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 3.2vh;
+    color: #2E2058;
+}
+
+.work p {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #2E2058;
+    margin-top: 3vh;
 }
 
 .whole-container {
     background-color: #f7f7f4;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .slider-container {
     width: 88vw;
-    margin-left: 10px;
+    margin-left: 5.8vw;
     background-color: #f7f7f4;
-    margin: auto;
-    margin-top: 100px;
+    margin-top: 5vh;
     place-items: center;
     overflow: hidden;
 }
 
-.slider-container .title h2{
+.slider-container .title h2 {
     color: #2E2058;
-    font-size: 25px;
+    font-size: 1.563rem;
     font-weight: 500;
-    padding: 50px 0 0 0px;
+    padding: 2vh 0 0 0px;
 }
+
 .slider {
     display: flex;
     gap: 60px;
@@ -194,7 +226,7 @@
 
 .services .head {
     color: #2E2058;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 3px;
     text-align: center;
@@ -203,7 +235,7 @@
 
 .services .subhead {
     color: #2E2058;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 700;
     text-align: center;
     margin-top: 40px;
@@ -216,7 +248,7 @@
     gap: 2.5vw;
 }
 
-.service-1{
+.service-1 {
     display: flex;
     margin: 50px 0 0 6vw;
     gap: 3vw;
@@ -226,7 +258,7 @@
     height: 370px;
     width: 20.5vw;
     margin-top: 40px;
-    box-shadow: 0 2px 7px 0 rgb(0,0,0,0.23);
+    box-shadow: 0 2px 7px 0 rgb(0, 0, 0, 0.23);
     transition: background-color 320ms ease;
 }
 
@@ -234,15 +266,15 @@
     background-color: #2E2058;
 }
 
-.services .box-hover:hover h4{
+.services .box-hover:hover h4 {
     color: #f8ec1f;
 }
 
-.services .box-hover:hover p{
+.services .box-hover:hover p {
     color: #ffffff;
 }
 
-.services .box-hover:hover span{
+.services .box-hover:hover span {
     color: #f8ec1f;
 }
 
@@ -250,7 +282,7 @@
     height: 345px;
     width: 20.5vw;
     margin-top: 54px;
-    box-shadow: 0 2px 7px 0 rgb(0,0,0,0.23);
+    box-shadow: 0 2px 7px 0 rgb(0, 0, 0, 0.23);
     transition: background-color 320ms ease;
 }
 
@@ -272,11 +304,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-.boxes .title h4{
-    font-size: 16px;
+.boxes .title h4 {
+    font-size: 1rem;
     color: #2E2058;
     margin: 40px 0 0 30px;
     font-weight: 700;
@@ -289,7 +321,7 @@
 
 .boxes .para p {
     color: #2E2058;
-    font-size: 13px;
+    font-size: 0.813rem;
     font-weight: 500;
     line-height: 24px;
     text-align: left;
@@ -301,7 +333,7 @@
 }
 
 .boxes .more span {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     color: #2E2058;
     position: relative;
@@ -309,7 +341,7 @@
 
 .more span::after {
     content: '→';
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 300;
     position: absolute;
     top: 50%;
@@ -354,7 +386,7 @@
     height: 376px;
     margin-top: 40px;
     width: 20vw;
-    box-shadow: 0 2px 7px 0 rgb(0,0,0,0.23);
+    box-shadow: 0 2px 7px 0 rgb(0, 0, 0, 0.23);
     transition: background-color 320ms ease;
 }
 
@@ -362,7 +394,7 @@
     height: 367px;
     margin-top: 45px;
     width: 20vw;
-    box-shadow: 0 2px 7px 0 rgb(0,0,0,0.23);
+    box-shadow: 0 2px 7px 0 rgb(0, 0, 0, 0.23);
     transition: background-color 320ms ease;
 }
 
@@ -393,15 +425,15 @@
     width: 47vw;
 }
 
-.about-container .about-info .para p{
-    font-size: 20px;
+.about-container .about-info .para p {
+    font-size: 1.25rem;
     font-weight: 600;
     color: #2E2058;
     letter-spacing: 3px;
 }
 
 .about-head h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 700;
     color: #2E2058;
     margin: 30px 0px;
@@ -411,8 +443,8 @@
     margin-right: 59px;
 }
 
-.about-info .description p{
-    font-size: 16px;
+.about-info .description p {
+    font-size: 1rem;
     font-weight: 500;
     color: #2E2058;
     line-height: 33.6px;
@@ -426,7 +458,7 @@
     color: #2E2058;
     background-color: #f8ec1f;
     padding: 14px 19px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
 }
@@ -446,7 +478,7 @@
 }
 
 .team-container .head h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 700;
     color: #2E2058;
     text-align: center;
@@ -454,68 +486,75 @@
 
 .team-info {
     display: flex;
-    gap: 10vw;
+    gap: 25%;
     width: 50vw;
     height: 400px;
-    margin: 40px 0 0 23vw;
+    margin: 40px 0 0 25%;
 }
 
-.ankur, .shekhar{
+.ankur,
+.shekhar {
     height: 400px;
     width: 30vw;
+    background-color: #eeedf2;
 }
 
-.ankur-img, .shekhar-img{
+.ankur-img,
+.shekhar-img {
     height: 280px;
     width: 320px;
 }
 
-.ankur-img img, .shekhar-img img {
+.ankur-img img,
+.shekhar-img img {
     height: 100%;
     width: 100%;
 }
 
-.ankur .para p, .shekhar .para p{
-    font-size: 14px;
+.ankur .para p,
+.shekhar .para p {
+    font-size: 0.875rem;
     font-weight: 600;
     color: #2E2058;
     text-align: center;
     margin: 20px 0 18px 1.5vw;
 }
 
-.ankur .name, .shekhar .name{
-    font-size: 30px;
+.ankur .name,
+.shekhar .name {
+    font-size: 1.875rem;
     font-weight: 700;
     color: #2E2058;
     text-align: center;
     margin: 0 0 17px 17px;
 }
 
-.ankur .position , .shekhar .position{
-    font-size: 13px;
+.ankur .position,
+.shekhar .position {
+    font-size: 0.813rem;
     font-weight: 600;
     color: #666666;
     margin-left: 56px;
 }
 
 .shekhar .para p {
-    margin-left: 0;
+    margin-left: 2.2vw;
 }
 
 .shekhar .name {
-    margin-left: 2px;
+    margin-left: 2vw;
 }
 
 .shekhar .position {
-    margin-left: 36px;
+    margin-left: 3.3vw;
 }
 
 .testim-container {
     margin-top: 10vh;
 }
 
-.testim-container .head h2{
-    font-size: 30px;
+.testim-container .head h2 {
+    font-size: 1.875rem;
     font-weight: 700;
     color: #2E2058;
     text-align: center;
@@ -538,14 +577,14 @@
 }
 
 .testim-boxes p {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 26px;
     color: #666666;
 }
 
 .testim-boxes h6 {
-    font-size: 15px;
+    font-size: 0.938rem;
     font-weight: 600;
     color: #0c71c3;
     margin-top: 20px;
@@ -565,8 +604,8 @@
     margin-left: 10vw;
 }
 
-.reviews .head{
-    font-size: 20px;
+.reviews .head {
+    font-size: 1.25rem;
     font-weight: 700;
     color: #2E2058;
     text-align: center;
@@ -574,13 +613,13 @@
 }
 
 .reviews img {
-    margin:40px 0.7vw 0 34vw;
+    margin: 40px 0.7vw 0 34vw;
     display: inline;
 }
 
 .reviews .rating {
     display: inline;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
 }
 
@@ -595,7 +634,7 @@
 
 .all-reviews .text {
     color: #f8ec1f;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     position: absolute;
     top: 50%;
@@ -618,7 +657,7 @@
 }
 
 .blog-container .blog-head {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #2E2058;
     letter-spacing: 3px;
@@ -626,7 +665,7 @@
 }
 
 .blog-container .blog-subhead {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 700;
     color: #2E2058;
     text-align: center;
@@ -636,7 +675,7 @@
 .blog-container .blog-boxes {
     height: 500px;
     width: 88vw;
-    margin:45px 0 0 6vw;
+    margin: 45px 0 0 6vw;
     display: flex;
     gap: 2vw;
 }
@@ -655,11 +694,12 @@
 .blog-boxes .description {
     margin: 2vw 0 0 1.2vw;
 }
+
 .blog-boxes .description span {
     height: 25px;
     width: 5vw;
     background-color: #2E2058;
-    font-size: 14.4px;
+    font-size: 0.9rem;
     color: #ffffff;
     padding: 0.4vw 0.7vw;
     text-align: left;
@@ -671,7 +711,7 @@
 }
 
 .blog-boxes .text a {
-    font-size: 20.8px;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #262626;
     line-height: 32px;
@@ -683,11 +723,11 @@
     filter: brightness(1.5);
 }
 
-.blog-boxes .blog-more div{
+.blog-boxes .blog-more div {
     width: 25.5vw;
     height: 55px;
     color: #262626;
-    font-size: 16px;
+    font-size: 1rem;
     border: 2px solid #2E2058;
     margin: 41px 0 0 1.15vw;
     display: flex;
@@ -702,7 +742,7 @@
     cursor: default;
 }
 
-.blog-boxes .box-2 .blog-more div{
+.blog-boxes .box-2 .blog-more div {
     margin-top: 9.5px;
 }
 
@@ -710,7 +750,7 @@
     margin-top: 9.5px;
 }
 
-.box-same:hover .blog-more div{
+.box-same:hover .blog-more div {
     color: #ffffff;
     background-color: #2E2058;
 }
@@ -718,7 +758,7 @@
 .blog-container .insights {
     width: 88vw;
     height: 50px;
-    margin:50px 0 0 6vw;
+    margin: 50px 0 0 6vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -729,13 +769,13 @@
     width: 12.5vw;
     background-color: #f8ec1f;
     color: #2E2058;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.insights a{
+.insights a {
     text-decoration: none;
 }
